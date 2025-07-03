@@ -28,6 +28,12 @@
         <collection property="userRoles" resultMap="UserRoleResultMap"/>
     </resultMap>
 
+    <insert id="addUser" useGeneratedKeys="true" keyProperty="userId">
+        insert into
+            user_tb
+        values (0, #{username}, #{password}, #{email}, now(), null)
+    </insert>
+
     <select id="getUserByUserId" resultMap="UserResult">
         select
             ut.user_id,
