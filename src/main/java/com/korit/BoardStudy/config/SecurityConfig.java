@@ -49,7 +49,7 @@ public class SecurityConfig {
 
         http.addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
         http.authorizeHttpRequests(auth -> {
-            auth.requestMatchers("").permitAll();
+            auth.requestMatchers("/auth/**").permitAll();
             auth.anyRequest().authenticated();
         });
 
