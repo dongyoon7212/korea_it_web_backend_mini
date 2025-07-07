@@ -44,7 +44,7 @@ public class JwtUtils {
         if (token == null) {
             return false;
         }
-        if (token.startsWith("Bearer ")) {
+        if (!token.startsWith("Bearer ")) {
             return false;
         }
         return true;
