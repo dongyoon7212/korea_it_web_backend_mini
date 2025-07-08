@@ -30,3 +30,5 @@ public class BoardController {
         return ResponseEntity.ok(boardService.getBoardList());
     }
 }
+
+//https://discord.gg/vK7cm9xR
