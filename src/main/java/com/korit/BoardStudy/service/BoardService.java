@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -54,6 +55,16 @@ public class BoardService {
             return new ApiRespDto<>("success", "게시물 조회 성공", optionalBoard.get());
         } else {
             return new ApiRespDto<>("failed", "해당 ID의 게시물을 찾을 수 없습니다.", null);
+        }
+    }
+
+    public ApiRespDto<?> getBoardList() {
+        List<Board> boardList = boardRepository.getBoardList();
+
+        if (boardList.isEmpty()) {
+            return new ApiRespDto<>("failed", "조회할 게시물이 없습니다.", null);
+        } else {
+            return new ApiRespDto<>("success", "게시물 목록 조회 성공", boardList);
         }
     }
 }

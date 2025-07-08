@@ -24,4 +24,9 @@ public class BoardController {
     public ResponseEntity<?> getBoardByBoardId(@PathVariable Integer boardId) {
         return ResponseEntity.ok(boardService.getBoardByBoardId(boardId));
     }
+
+    @GetMapping("/list")
+    public ResponseEntity<?> getBoardList() {
+        return ResponseEntity.ok(boardService.getBoardList());
+    }
 }
