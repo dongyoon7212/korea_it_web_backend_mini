@@ -5,6 +5,8 @@ import com.korit.BoardStudy.mapper.BoardMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import java.util.Optional;
+
 @Repository
 public class BoardRepository {
 
@@ -13,5 +15,9 @@ public class BoardRepository {
 
     public int addBoard(Board board) {
         return boardMapper.addBoard(board);
+    }
+
+    public Optional<Board> getBoardByBoardId(Integer boardId) {
+        return boardMapper.getBoardByBoardId(boardId);
     }
 }
