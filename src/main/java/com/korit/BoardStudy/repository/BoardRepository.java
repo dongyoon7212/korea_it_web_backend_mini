@@ -29,4 +29,8 @@ public class BoardRepository {
     public int removeBoardByBoardId(Integer boardId) {
         return boardMapper.removeBoardByBoardId(boardId);
     }
+
+    public int updateBoardByBoardId(Board board) {
+        return boardMapper.updateBoardByBoardId(board);
+    }
 }
