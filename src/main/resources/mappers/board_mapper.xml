@@ -35,4 +35,11 @@
             board_tb
     </select>
 
+    <delete id="removeBoardByBoardId">
+        delete from
+            board_tb
+        where
+            board_id = #{boardId}
+    </delete>
+
 </mapper>

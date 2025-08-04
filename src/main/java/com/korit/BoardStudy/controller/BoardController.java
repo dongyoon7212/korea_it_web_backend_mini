@@ -29,6 +29,11 @@ public class BoardController {
     public ResponseEntity<?> getBoardList() {
         return ResponseEntity.ok(boardService.getBoardList());
     }
+
+    @PostMapping("/remove/{boardId}")
+    public ResponseEntity<?> removeBoardByBoardId(@PathVariable Integer boardId, @AuthenticationPrincipal PrincipalUser principalUser) {
+        return ResponseEntity.ok(boardService.removeBoardByBoardId(boardId, principalUser));
+    }
 }
 
 //https://discord.gg/vK7cm9xR
