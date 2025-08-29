@@ -33,6 +33,8 @@
             *
         from
             board_tb
+        order by
+            create_dt DESC
     </select>
 
     <delete id="removeBoardByBoardId">
