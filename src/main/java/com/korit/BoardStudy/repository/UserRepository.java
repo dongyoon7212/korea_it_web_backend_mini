@@ -39,4 +39,8 @@ public class UserRepository {
     public int changePassword(User user) {
         return userMapper.updatePassword(user);
     }
+
+    public int changeProfileImg(User user) {
+        return userMapper.updateProfileImg(user);
+    }
 }

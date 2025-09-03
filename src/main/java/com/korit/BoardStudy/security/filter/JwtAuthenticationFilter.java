@@ -52,6 +52,7 @@ public class JwtAuthenticationFilter implements Filter {
                             .username(user.getUsername())
                             .password(user.getPassword())
                             .email(user.getEmail())
+                            .profileImg(user.getProfileImg())
                             .userRoles(user.getUserRoles())
                             .build();
 
