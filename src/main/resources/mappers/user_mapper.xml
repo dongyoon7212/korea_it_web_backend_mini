@@ -128,7 +128,6 @@
 
     <update id="updateProfileImg" >
         update
-        from
             user_tb
         set
             profile_img = #{profileImg},
